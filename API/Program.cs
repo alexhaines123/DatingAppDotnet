@@ -16,9 +16,10 @@ builder.Services.AddIdentityServices(builder.Configuration);
 var app = builder.Build();
 
 
-app.UseCors(builder => builder.AllowAnyHeader()
-.AllowAnyMethod()
-.WithOrigins("https://localhost:4200"));
+app.UseCors(builder => builder
+  .AllowAnyHeader()
+  .AllowAnyMethod()
+  .WithOrigins("https://localhost:4200"));
 
 app.UseHttpsRedirection();
 
