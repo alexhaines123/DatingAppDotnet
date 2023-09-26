@@ -1,0 +1,15 @@
+<p>server-error works!</p>
+<h4>Inter nal server error - refreshing the page will make this go</h4>
+<ng-container *ngIf="error"
+  ><h5 class="text-danger">Error {{ error.message }}</h5>
+  <p class="font-weight-bold">
+    note: if you are seeing this ang is not the one
+  </p>
+  <p>what to do</p>
+  <ol>
+    <li>Open chrome dev</li>
+    <li>examine the request url what api</li>
+    <li>reproduce the prob in postman</li>
+  </ol>
+  <code class="mt-5">{{ error.details }}</code>
+</ng-container>
